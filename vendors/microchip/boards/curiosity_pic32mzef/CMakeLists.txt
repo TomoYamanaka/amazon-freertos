@@ -25,7 +25,7 @@ endif()
 afr_mcu_port(compiler)
 
 # Compiler flags
-set(c_flags -g -x c -ffunction-sections -O1 -mprocessor=32MZ2048EFM100 -mnewlib-libc -std=gnu99 -fgnu89-inline)
+set(c_flags VERBOSE=1 -g -x c -ffunction-sections -O1 -mprocessor=32MZ2048EFM100 -mnewlib-libc -std=gnu99 -fgnu89-inline)
 set(asm_flags -mprocessor=32MZ2048EFM100 -MMD -MF  -Wa$<COMMA>--gdwarf-2)
 target_compile_options(
     AFR::compiler::mcu_port
